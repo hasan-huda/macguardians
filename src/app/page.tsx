@@ -27,7 +27,7 @@ export default function Home() {
                 Create your{" "}
                 <span className="font-semibold">unique style</span> with a custom MacBook case.
                 MacGuardians allows you to protect your memories, not just your
-                laptop case.
+                macbook case.
               </p>
 
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
