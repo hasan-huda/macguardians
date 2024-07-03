@@ -1,7 +1,7 @@
 "use client";
 
 import { HTMLAttributes, useEffect, useRef, useState } from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
+import MaxWidthWrap from "./MaxWidthWrap";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Phone from "./Phone";
@@ -156,7 +156,7 @@ function ReviewGrid() {
 
 export function Reviews() {
   return (
-    <MaxWidthWrapper className="relative max-w-5xl">
+    <MaxWidthWrap className="relative max-w-5xl">
       <img
         aria-hidden="true"
         src="/what-people-are-buying.png"
@@ -164,6 +164,6 @@ export function Reviews() {
       />
 
       <ReviewGrid />
-    </MaxWidthWrapper>
+    </MaxWidthWrap>
   );
 }

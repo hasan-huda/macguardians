@@ -12,7 +12,7 @@ import Confetti from "react-dom-confetti";
 import { createCheckoutSession } from "./actions";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
-import { useAuth } from "@/lib/auth";
+import { useAuth } from "@/lib/useAuth";
 import LoginModal from "@/components/LoginModal";
 
 export type UserNew = {

@@ -3,7 +3,8 @@ import Link from "next/link";
 import MaxWidthWrap from "./MaxWidthWrap";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import { useAuth, logOut } from "@/lib/auth";
+import {  logOut } from "@/lib/auth";
+import { useAuth } from "@/lib/useAuth";
 
 
 const Navbar = () => {

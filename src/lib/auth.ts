@@ -8,7 +8,6 @@ import {
   User,
 } from "firebase/auth";
 import { auth } from "./firebaseConfig";
-import { useState, useEffect } from "react";
 
 export const signUp = async (email: string, password: string) => {
   try {
@@ -65,29 +64,6 @@ export const authStateListener = (callback: (user: User | null) => void) => {
   });
 };
 
-export const useAuth = () => {
-  const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-  const [user, setUser] = useState<User | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = authStateListener((user) => {
-      setUser(user);
-      if (user && adminEmail) {
-        setIsAdmin(adminEmail === user.email);
-      } else {
-        setIsAdmin(false);
-      }
-    });
-    return () => {
-      if (typeof unsubscribe === "function") {
-        unsubscribe();
-      }
-    };
-  }, []);
-
-  return { user, isAdmin };
-};
 
 export const getCurrentUser = (): User | null => {
   return auth.currentUser;
