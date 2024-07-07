@@ -27,7 +27,6 @@ export const googleSignUp = async () => {
   const googleProvider = new GoogleAuthProvider();
   try {
     const userCredential = await signInWithPopup(auth, googleProvider);
-    console.log(userCredential.user);
     return userCredential.user;
   } catch (error) {
     console.log("Error Signing up:", error);
